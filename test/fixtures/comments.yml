@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   c_content: MyString
   user_id: 1
   post_id: 1
@@ -9,3 +10,13 @@ two:
   c_content: MyString
   user_id: 1
   post_id: 1
+=======
+  post_id: 1
+  c_content: MyString
+  user_id: 1
+
+two:
+  post_id: 1
+  c_content: MyString
+  user_id: 1
+>>>>>>> mark
