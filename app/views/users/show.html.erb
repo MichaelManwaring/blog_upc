@@ -1,4 +1,21 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-	content_tag(:h1, "@user Profile")
+	<h1> <%= @user%>'s Profile</h1>
+
+		<h2> <%= @user.first_name %></h2>
+		<h2> <%= @user.last_name %></h2>
+
+	<h1>Post Down Below:</h1>
+
+		<%= form_for @post, url: posts_path, html: {method: :post} do |p| %>
+		  <%=p.label :new_post %>
+		  <%=p.text_area :content %>  
+		  <%=p.submit :create %>
+		<% end %>
+
+	<% @user.posts.each do |p|%>
+	<h4>
+    	<%= p.content %>
+	</h4> <br>
+<% end %>
