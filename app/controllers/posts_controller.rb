@@ -1,14 +1,17 @@
 class PostsController < ApplicationController
 
 def create
-	@user = User.new(params[:id])
-    if User.save
-      flash[:id] = @User.id
-      redirect_to @user
+    @post = Post.create params[:post]
+    redirect_to posts_path
+  end
 end
 
 def delete
-
+    @post = Post.find(params[:id])
+    @post.delete
+    redirect_to(:post)
+    flash[:error] = "Post deleted."
+  end
 end
 
 
