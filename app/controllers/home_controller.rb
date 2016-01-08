@@ -5,4 +5,9 @@ class HomeController < ApplicationController
 
   def feed
   end
+
+  def show
+  	@post=Post.new(params[:user])
+  end
+
 end
