@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'home/feed'
+
   get 'comments/create' 
   get 'comments/delete'
 
