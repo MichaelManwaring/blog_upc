@@ -1,2 +1,25 @@
 <h1>Home#feed</h1>
 <p>Find me in app/views/home/feed.html.erb</p>
+
+<%= content_tag :h3, 'Create a new post:' %>
+
+<%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
+  <%=f.label :new_post %>
+  <%=f.text_area :content %>  
+  <%=f.submit :create %>
+<% end %>
+
+<% @posts.each do |p| %>
+	<h4>
+		<%= p.content %>
+	</h4>
+
+	<%= p.comments.each do |c| %>
+		<h6><%= c.content %></h6>
+	<% end %>
+<% end %>
+
+
+<%= form_tag("/sign_out", method: "get") do %>
+    <%=submit_tag("Sign Out") %>
+<% end %>
