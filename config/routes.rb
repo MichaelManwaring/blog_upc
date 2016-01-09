@@ -5,21 +5,15 @@ Rails.application.routes.draw do
 #posts feed page
 get 'home/feed' => 'home#feed'
 
-#user comment create or delete
-get 'comments/create' 
-get 'comments/delete'
-    
+  get 'comments/create' 
+  get 'comments/delete'
 
   # get    'sign_in'   => 'sessions#new'
   get '/sign_in'   => 'sessions#create'
   get '/sign_out'  => 'sessions#destroy'
 
-  # get    'login'   => 'sessions#new'
-  # post   'login'   => 'sessions#create'
-  # delete 'logout'  => 'sessions#destroy'
   get 'user/:id' => 'users#show'
 
-  #user edit profile
   get '/profiles/new' => 'profiles#new'
   get '/profiles/:id/edit' => 'profiles#edit'
 
