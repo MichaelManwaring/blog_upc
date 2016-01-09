@@ -3,9 +3,11 @@
 <%= content_tag :h3, @post.p_content %>
 <!-- comment form embedded in post. -->
 <%= form_for @comment, url: comments_path, html: {method: :post} do |f| %>
-
+	<%=f.label :content %>
+	<%=f.text_area :c_content %>  
+	<%=f.submit :create %>
 <% end %>
 <!-- comment loop -->
-<%= p.comments.each do |c| %>
+<%= @post.comments.reverse.each do |c| %>
 	<%= content_tag :h6, c.c_content %>
-<% end %>s
+<% end %>

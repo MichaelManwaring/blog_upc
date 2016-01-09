@@ -2,19 +2,30 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 
-<%= content_tag :h1, '@user profile' %>
+<%= content_tag :h1, 'user profile for:' %>
 
 <h2> <%= @user.username %></h2>
 
-	<%= content_tag :h1, 'Your Profile' %>
 
-		<h1> <%= @user.username %></h1>
+<%= content_tag :h1, 'User Posts:' %>
 
-		
-<%= content_tag :h1, 'Post Down Below:' %>
+<% @user.posts.reverse.each do |p| %>
+	<%= content_tag :h4, p.title %>
+ 	<%= content_tag :h5, p.user.username %>
+	<%= content_tag :h5, p.p_content %>
+	<!-- comment form embedded in post. -->
+	<%= link_to "Click here to comment", post_path(p) %> %>
+	<!-- comment loop -->
+	<%= p.comments.each do |c| %>
+		<%= content_tag :h6, c.c_content %>
+	<% end %>
+<% end %>
 
 
 
+
+<% if @user == @currentuser %>
+	<%= content_tag :h1, 'Create Post:' %>
 	<%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
 	  <%=f.label :title %>
 	  <%=f.text_area :title %>  
@@ -23,4 +34,4 @@
 	  <%=f.text_area :p_content %>  
 	  <%=f.submit :create %>
 	<% end %>
-
+<% end %>

@@ -14,5 +14,7 @@ class HomeController < ApplicationController
     def show
   	     @post=Post.new(params[:user])
     end
-
+    def usernamefun(post)
+    	@username=post.user.username
+    end
 end
