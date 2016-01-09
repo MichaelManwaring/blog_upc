@@ -9,32 +9,19 @@ get 'home/feed' => 'home#feed'
 get 'comments/create' 
 get 'comments/delete'
     
-<<<<<<< HEAD
+
   # get    'sign_in'   => 'sessions#new'
   get '/sign_in'   => 'sessions#create'
   get '/sign_out'  => 'sessions#destroy'
-
 
   # get    'login'   => 'sessions#new'
   # post   'login'   => 'sessions#create'
   # delete 'logout'  => 'sessions#destroy'
   get 'user/:id' => 'users#show'
 
-=======
-#get 'sign_in'   => 'sessions#new'
-get '/sign_in'   => 'sessions#create'
-get '/sign_out'  => 'sessions#destroy'
->>>>>>> 03e98d70ff5943b8edce990c073a2c4f8da61d8c
-    
-#user edit profile
-get '/profiles/new' => 'profiles#new'
-get '/profiles/:id/edit' => 'profiles#edit'
-
-
-    
-     
-    
-
+  #user edit profile
+  get '/profiles/new' => 'profiles#new'
+  get '/profiles/:id/edit' => 'profiles#edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
