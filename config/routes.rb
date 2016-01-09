@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+#profile
 
-  get 'home/feed' => 'home#feed'
+#posts feed page
+get 'home/feed' => 'home#feed'
 
-  get 'comments/create' 
-  get 'comments/delete'
+#user comment create or delete
+get 'comments/create' 
+get 'comments/delete'
     
+<<<<<<< HEAD
   # get    'sign_in'   => 'sessions#new'
   get '/sign_in'   => 'sessions#create'
   get '/sign_out'  => 'sessions#destroy'
@@ -16,7 +20,19 @@ Rails.application.routes.draw do
   # delete 'logout'  => 'sessions#destroy'
   get 'user/:id' => 'users#show'
 
+=======
+#get 'sign_in'   => 'sessions#new'
+get '/sign_in'   => 'sessions#create'
+get '/sign_out'  => 'sessions#destroy'
+>>>>>>> 03e98d70ff5943b8edce990c073a2c4f8da61d8c
     
+#user edit profile
+get '/profiles/new' => 'profiles#new'
+get '/profiles/:id/edit' => 'profiles#edit'
+
+
+    
+     
     
 
 
