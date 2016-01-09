@@ -6,18 +6,15 @@ Rails.application.routes.draw do
   get 'comments/create' 
   get 'comments/delete'
     
-<<<<<<< HEAD
+
   # get    'sign_in'   => 'sessions#new'
   get '/sign_in'   => 'sessions#create'
   get '/sign_out'  => 'sessions#destroy'
 
-
-=======
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  # get    'login'   => 'sessions#new'
+  # post   'login'   => 'sessions#create'
+  # delete 'logout'  => 'sessions#destroy'
   get 'user/:id' => 'users#show'
->>>>>>> e0cd1851c263c7e808f79eb35b148123ec35bfdd
     
     
 

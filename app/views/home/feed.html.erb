@@ -14,6 +14,7 @@
 
 <% @posts.each do |p| %>
 	<%= content_tag :h4, p.title %>
+  <%= content_tag :h5, p.user.username %>
 	<%= content_tag :h5, p.p_content %>
 	<%= form_for @comment, url: comments_path, html: {method: :post} do |f| %>
  		<%=f.label :comment %>
