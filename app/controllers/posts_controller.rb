@@ -7,8 +7,16 @@ end
 
 def delete
     @post = Post.find(params[:id])
-    @post.delete
+  	if @post.id=session[:user_id]
+  	  	@post.delete
+	else
+    	flash[:alert] = "Not your post to delete!"   
+    end
     redirect_to home_feed_path
+end
+def show
+	@post=Post.find(params[:id])
+	
 end
 
 private
