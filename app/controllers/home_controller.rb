@@ -4,5 +4,9 @@ class HomeController < ApplicationController
   end
 
   def feed
+  	@posts=Post.all
+  	@users=User.all
+  	@post=Post.new
+  	@comment=Comment.new
   end
 end

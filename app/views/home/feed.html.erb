@@ -4,19 +4,27 @@
 <%= content_tag :h3, 'Create a new post:' %>
 
 <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
-  <%=f.label :new_post %>
-  <%=f.text_area :content %>  
+  <%=f.label :title %>
+  <%=f.text_area :title %>  
+  <br>
+  <%=f.label :content %>
+  <%=f.text_area :p_content %>  
   <%=f.submit :create %>
 <% end %>
 
 <% @posts.each do |p| %>
-	<h4>
-		<%= p.content %>
-	</h4>
+	<%= content_tag :h4, p.title %>
+	<%= content_tag :h5, p.p_content %>
+	<%= form_for @comment, url: comments_path, html: {method: :post} do |f| %>
+ 		<%=f.label :comment %>
+  		<%=f.text_area :c_content %>  
+		<%= hidden_field_tag :post_id, p.id%>
+  		<%=f.submit :create %>
+	<% end %>
 
 	<%= p.comments.each do |c| %>
-		<h6><%= c.content %></h6>
-	<% end %>
+		<%= content_tag :h6, c.c_content %>
+	<% end %>s
 <% end %>
 
 

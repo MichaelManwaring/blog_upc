@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
 
-  get 'home/feed'
+  get 'home/feed' => 'home#feed'
 
   get 'comments/create' 
   get 'comments/delete'
     
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  # get    'sign_in'   => 'sessions#new'
+  get '/sign_in'   => 'sessions#create'
+  get '/sign_out'  => 'sessions#destroy'
+
+
     
     
 
