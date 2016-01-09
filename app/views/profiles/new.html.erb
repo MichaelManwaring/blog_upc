@@ -1,0 +1,26 @@
+<% provide(:title, "Edit user") %>
+<h1>Create your profile</h1>
+
+<div class="page_content"><!--  page content  -->
+    
+    <div class="formBOX">
+        
+        <%= form_for @profile do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :bio %>
+        <%= f.bio_field :bio, class: 'form-control' %>
+
+        <%= f.submit "Save", class: "btn btn-primary" %>
+        <% end %>
+        
+    </div> <!--  end of formBOX  -->
+    
+</div> <!--  end of page content  -->
+
+

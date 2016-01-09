@@ -1,23 +1,25 @@
 Rails.application.routes.draw do
 
-    #posts feed page
-    get 'home/feed' => 'home#feed'
+#profile
 
-    #user comment create or delete
-    get 'comments/create' 
-    get 'comments/delete'
+#posts feed page
+get 'home/feed' => 'home#feed'
+
+#user comment create or delete
+get 'comments/create' 
+get 'comments/delete'
     
-    #get    'sign_in'   => 'sessions#new'
-    get '/sign_in'   => 'sessions#create'
-    get '/sign_out'  => 'sessions#destroy'
+#get 'sign_in'   => 'sessions#new'
+get '/sign_in'   => 'sessions#create'
+get '/sign_out'  => 'sessions#destroy'
     
-    #user edit profile
-    get  '/users/:id/edit' => 'users#edit'
-    
+#user edit profile
+get '/profiles/new' => 'profiles#new'
+get '/profiles/:id/edit' => 'profiles#edit'
 
 
-
     
+     
     
 
 
