@@ -9,4 +9,9 @@ class HomeController < ApplicationController
   	@post=Post.new
   	@comment=Comment.new
   end
+
+  def show
+  	@post=Post.new(params[:user])
+  end
+
 end
