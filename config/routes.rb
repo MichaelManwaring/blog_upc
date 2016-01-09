@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'comments/create' 
   get 'comments/delete'
-    
+
   # get    'sign_in'   => 'sessions#new'
   get '/sign_in'   => 'sessions#create'
   get '/sign_out'  => 'sessions#destroy'
@@ -15,10 +15,6 @@ Rails.application.routes.draw do
   # post   'login'   => 'sessions#create'
   # delete 'logout'  => 'sessions#destroy'
   get 'user/:id' => 'users#show'
-
-    
-    
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

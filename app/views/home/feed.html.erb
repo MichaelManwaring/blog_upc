@@ -14,6 +14,7 @@
 
 <% @posts.each do |p| %>
 	<%= content_tag :h4, p.title %>
+ 	<%= content_tag :h5, p.user.username %>
 	<%= content_tag :h5, p.p_content %>
 	<!-- comment form embedded in post. -->
 	<%= link_to "Click here to comment", post_path(p) %> %>
