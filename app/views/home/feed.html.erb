@@ -1,6 +1,13 @@
 <h1>Home#feed</h1>
 <p>Find me in app/views/home/feed.html.erb</p>
 
+<%=content_tag :h1, "Current Members:"%>
+
+<% @users.each do |u| %>
+<%= link_to u.username, user_path(u) %>
+<% end %>
+
+
 <%= content_tag :h3, 'Create a new post:' %>
 
 <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
@@ -12,16 +19,14 @@
   <%=f.submit :create %>
 <% end %>
 
-<% @posts.each do |p| %>
-	<%= content_tag :h4, p.title %>
-	<%= content_tag :h5, p.p_content %>
-	<%= form_for @comment, url: comments_path, html: {method: :post} do |f| %>
- 		<%=f.label :comment %>
-  		<%=f.text_area :c_content %>  
-		<%= hidden_field_tag :post_id, p.id%>
-  		<%=f.submit :create %>
-	<% end %>
 
+<% @posts.reverse.each do |p| %>
+	<%= content_tag :h4, p.title %>
+ 	<%= content_tag :h5, usernamefun(p) %>
+	<%= content_tag :h5, p.p_content %>
+	<!-- comment form embedded in post. -->
+	<%= link_to "Click here to comment", post_path(p) %> %>
+	<!-- comment loop -->
 	<%= p.comments.each do |c| %>
 		<%= content_tag :h6, c.c_content %>
 	<% end %>s

@@ -3,12 +3,17 @@ class CommentsController < ApplicationController
 	@user=current_user
 	@comment=Comment.create(comment_params)
 	@user.comments.push(@comment)
+	@post=
     redirect_to home_feed_path
   end
 
   def delete
   	@comment=Comment.where(params[:comment])
-  	@comment.delete
+  	if @comment.id=session[:user_id]
+  	  	@comment.delete
+	else
+    	flash[:alert] = "Not your comment to delete!"   
+    end
   end
   private
   def comment_params

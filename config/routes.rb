@@ -5,23 +5,17 @@ Rails.application.routes.draw do
 #posts feed page
 get 'home/feed' => 'home#feed'
 
-#user comment create or delete
-get 'comments/create' 
-get 'comments/delete'
-    
-#get 'sign_in'   => 'sessions#new'
-get '/sign_in'   => 'sessions#create'
-get '/sign_out'  => 'sessions#destroy'
-    
-#user edit profile
-get '/profiles/new' => 'profiles#new'
-get '/profiles/:id/edit' => 'profiles#edit'
+  get 'comments/create' 
+  get 'comments/delete'
 
+  # get    'sign_in'   => 'sessions#new'
+  get '/sign_in'   => 'sessions#create'
+  get '/sign_out'  => 'sessions#destroy'
 
-    
-     
-    
+  get 'user/:id' => 'users#show'
 
+  get '/profiles/new' => 'profiles#new'
+  get '/profiles/:id/edit' => 'profiles#edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -18,7 +18,7 @@
 <%=content_tag :h1, "Current Members:"%>
 
 <% @users.each do |u| %>
-<%= link_to u.username, user_path(u) %>
+<%= content_tag :h4, u.username %>
 <% end %>
     
 </div>

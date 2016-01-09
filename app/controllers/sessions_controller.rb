@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
             redirect_to home_feed_path
         else
             flash[:danger] = 'Invalid email/password combination'
-            render 'new'
-		      end
+            redirect_to root_path
+		end
 	   end
 
     
