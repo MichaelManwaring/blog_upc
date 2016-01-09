@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
     
     def create
         @profile = Profile.create(profile_params)
-        redirect_to home_index_path
+        redirect_to root_path
     end
             
     def edit

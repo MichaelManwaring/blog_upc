@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 def create
     @post = Post.create(post_params)
     @user = current_user
-    @user.post.push(@post)
+    @user.posts.push(@post)
     redirect_to home_feed_path
 end
 
@@ -18,7 +18,7 @@ def delete
 end
 def show
 	@post=Post.find(params[:id])
-	
+	@comment =Comment.new
 end
 
 
