@@ -3,9 +3,10 @@
 
 	<%= content_tag :h1, '@user profile' %>
 
-		<h2> <%= @user %></h2>
-
+		<h2> <%= @user.username %></h2>
+		
 	<%= content_tag :h1, 'Post Down Below:' %>
+
 
 		<%= form_for @post %>
 		  <%=p.label :new_post %>
