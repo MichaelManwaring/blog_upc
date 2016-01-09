@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.save     
             # flash[:notice] = "Your account was created successfully."     
-            redirect_to user_path @user   
+            redirect_to root_path 
         else     
             # flash[:alert] = "There was a problem saving your account."   
             redirect_to new_user_path   
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        @post = Post.new
     end
 
     
