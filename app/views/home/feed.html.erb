@@ -1,38 +1,38 @@
 <h1>ToastPosts Feed</h1>
 <p>Welcome to Our Feed Page</p>
 
-<%=content_tag :h1, "Current Members:"%>
-
-<% @users.each do |u| %>
-<%= link_to u.username, user_path(u) %>
-<% end %>
-
-
-<%= content_tag :h3, 'Create a new post:' %>
-
-<%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
-  <%=f.label :title %>
-  <%=f.text_area :title %>  
+<div id ="post_form">
+     <%= content_tag :h3, 'Create a new post:' %>
+     <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
+        <%=f.label :title %>
+    <br>
+        <%=f.text_area :title %>  
   <br>
-  <%=f.label :content %>
-  <%=f.text_area :p_content %>  
-  <%=f.submit :create %>
-<% end %>
+        <%=f.label :content %>
+    <br>
+        <%=f.text_area :p_content %>  
+        <%=f.submit :create %>
+    <% end %>
+</div>
 
 
-<% @posts.reverse.each do |p| %>
-	<%= content_tag :h4, p.title %>
- 	<%= content_tag :h5, usernamefun(p) %>
-	<%= content_tag :h5, p.p_content %>
-	<!-- comment form embedded in post. -->
-	<%= link_to "Click here to comment", post_path(p) %> %>
-	<!-- comment loop -->
-	<%= p.comments.each do |c| %>
-		<%= content_tag :h6, c.c_content %>
-	<% end %>s
-<% end %>
+<div id = "posts">
+    <% @posts.reverse.each do |p| %>
+        <%= content_tag :h4, p.title %>
+ 	          <%= content_tag :h5, usernamefun(p) %>
+	       <%= content_tag :h5, p.p_content %>
+	       <!-- comment form embedded in post. -->
+        <%= link_to "Reply", post_path(p) %> %>
+	       <!-- comment loop -->
+	       <%= p.comments.each do |c| %>
+		          <%= content_tag :h6, c.c_content %>
+	       <% end %>s
+    <% end %>
+</div>
 
 
-<%= form_tag("/sign_out", method: "get") do %>
-    <%=submit_tag("Sign Out") %>
-<% end %>
+<div id = "sign_out">
+     <%= form_tag("/sign_out", method: "get") do %>
+        <%=submit_tag("Sign Out") %>
+     <% end %>
+</div>
