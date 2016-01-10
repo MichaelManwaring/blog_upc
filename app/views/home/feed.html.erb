@@ -22,11 +22,11 @@
  	          <%= content_tag :h5, usernamefun(p) %>
 	       <%= content_tag :h5, p.p_content %>
 	       <!-- comment form embedded in post. -->
-        <%= link_to "Reply", post_path(p) %> %>
+        <%= link_to "Reply", post_path(p) %> 
 	       <!-- comment loop -->
-	       <%= p.comments.each do |c| %>
+	       		<%p.comments.each do |c| %>
 		          <%= content_tag :h6, c.c_content %>
-	       <% end %>s
+		       <% end %>
     <% end %>
 </div>
 
