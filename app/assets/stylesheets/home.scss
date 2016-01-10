@@ -24,13 +24,59 @@ time, mark, audio, video {
 
 body {
     width: 100%;
-    height: 100%;
-    background-color: yellow;
+    display: inline-block;
 }
 
-.content {
-    height: 100%;
-    background-color: aqua;
-    width: 960px;
-    margin: 0 auto;
+body img {
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#signin {
+    display: block;
+    padding: 10% 25% 5% 29%;
+    background-color: rgba(123, 245, 173, .5);
+}
+
+#signin h1 {
+    margin-left: 39%;
+    text-decoration: none;
+    color: white;
+    font-size: 5.0vh;
+    font-family: redressed, helvetica;
+}
+
+#signin h3 {
+    margin-left: 35%;
+    text-decoration: none;
+    color: white;
+    font-size: 3.0vh;
+    font-family: redressed, helvetica;
+}
+
+
+#scroller {
+    height: 90px;
+    overflow: scroll;
+    position:absolute;
+    padding-left: 46%;
+    bottom:0;
+    width:100%;
+    background-color: rgba(20, 151, 254, .5);
+    color: white;
+    font-family: redressed, helvetica;
+    font-size: 2.5vh;
+}
+
+#scroller h1 {
+    color: white;
+    font-family: redressed, helvetica;
+    font-size: 3.0vh;
+
 }

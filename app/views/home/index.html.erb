@@ -1,24 +1,46 @@
+
+
+<img src="/assets/home-3b04ac2f9d15723d91ad54590e43d600564047441ca34badf67f06a69608ca5b.jpg">
+
 <div class ="content">
+      
+    <div id = "signin">
     
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+        <%=content_tag :h1, "Sign In"%> <br>
+    
+        <h3>
+            <%= form_tag("/sign_in", method: "get") do %>
+                <%=label_tag(:username, "username") %>
+                <%=text_field_tag(:username) %>  
+    
+            <br>
+        
+                <%=label_tag(:password, "password:") %>
+                <%=text_field_tag(:password) %>
+            <%=submit_tag("Submit") %> 
+            
+            <br>    
+        
+        </h3>
+        
+            <br>
+    
+        <h1>
+            <%= link_to "Sign Up!", new_user_path %>
+        </h1>
+        
+    <% end %>
+        
+</div>
+ 
+<div id = "scroller">
 
-<%=content_tag :h1, "Sign In Here:"%>
-<%= form_tag("/sign_in", method: "get") do %>
-    <%=label_tag(:username, "username") %>
-    <%=text_field_tag(:username) %>  
-    <%=label_tag(:password, "password:") %>
-    <%=text_field_tag(:password) %>
-    <%=submit_tag("Submit") %>
-<% end %>
+    <%=content_tag :h1, "Current Members:"%>
+    
+    <br>
 
-
-<%= link_to "Or Sign Up!", new_user_path %>
-
-<%=content_tag :h1, "Current Members:"%>
-
-<% @users.each do |u| %>
-<%= content_tag :h4, u.username %>
-<% end %>
+    <% @users.each do |u| %>
+        <%= content_tag :h4, u.username %>
+    <% end %>
     
 </div>
