@@ -1,3 +1,70 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    width: 100%;
+    display: inline-block;
+    background-color: aquamarine;
+}
+
+#content {
+    width: 720px;
+    margin-left: 45%;
+}
+
+#post_form h3 {
+    padding-bottom: 3%;
+    font-family: redressed, helvetica;
+    font-size: 6.0vh;
+    margin-left: -10%;
+}
+
+#post_form {
+    width: 720px;
+    margin-left: 46%;
+    margin-top: 13%;
+    padding-bottom: 7%;
+}
+
+#posts {
+    overflow: scroll;
+    width: 720px;
+    margin-left: 25%;
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 90px;
+}
+
+#posts h4 {
+    margin-left: 42%;
+    font-family: redressed, helvetica;
+    font-size: 3.0vh;
+
+}
+
+#sign_out {
+    width: 720px;
+    margin-left: 50%;
+    padding-top: 5px;
+}

@@ -1,8 +1,22 @@
+<div id= "new_account">
+
 <%= content_tag :h1, "Create your account!" %>
+    <br>
     <%= form_for @user do |f| %>
-    <%=f.label :username %>
+    
+    <%=f.label :username %> 
+<br>
     <%=f.text_field :username %>  
-    <%=f.label :password %>
+<br>
+    <%=f.label :password %> 
+<br>
     <%=f.text_field :password %>
-    <%=f.submit :create %>
-<% end %>
+<br>
+    
+    <div id =button_account>    
+        <%=f.submit :create %>
+    </div>
+
+    <% end %>
+     
+</div>
