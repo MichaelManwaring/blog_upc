@@ -35,8 +35,6 @@
 
     <%=content_tag :h1, "Current Members:"%>
     
-    <br>
-
     <% @users.each do |u| %>
         <%= content_tag :h4, u.username %>
     <% end %>

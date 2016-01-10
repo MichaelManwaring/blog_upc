@@ -47,3 +47,20 @@ body {
     display: inline;
     padding: 10px 30px 10px 30px;
 }
+
+.page_content {
+    width: 320px;
+    margin: 10% 20% 0 45%;
+}
+
+.page_content h1 {
+    margin-left: -23%;
+    font-family: redressed, helvetica;
+    font-size: 5.0vh;
+}
+
+.form-control_bio {
+    height: 150px;
+    width: 300px;
+}
+
