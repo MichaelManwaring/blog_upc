@@ -3,8 +3,9 @@ class CommentsController < ApplicationController
 	@user=current_user
 	@comment=Comment.create(comment_params)
 	@user.comments.push(@comment)
-	@post=
-    redirect_to home_feed_path
+	# @post=Post.find(params[:id])
+  @post.comments.push(@comment)
+  redirect_to home_feed_path
   end
 
   def delete
