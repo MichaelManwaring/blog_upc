@@ -28,9 +28,9 @@ body {
     background-color: aquamarine;
 }
 
-#content {
-    width: 720px;
-    margin-left: 45%;
+.main_container{
+    width: 100%;
+    height: 100%;
 }
 
 #post_form h3 {
@@ -43,8 +43,8 @@ body {
 #post_form {
     width: 720px;
     margin-left: 46%;
-    margin-top: 6%;
-    padding-bottom: 7%;
+    margin-top: 1%;
+    padding-bottom: 2%;
 }
 
 #posts {
@@ -53,9 +53,9 @@ body {
     overflow: scroll;
     width: 720px;
     margin-left: 25%;
-    background-color: aqua;
     padding: 50px;
     border-radius: 90px;
+    background-color: aqua;
 }
 
 #posts h4 {
@@ -66,7 +66,6 @@ body {
 }
 
 #sign_out {
-    width: 720px;
-    margin-left: 50%;
-    padding-top: 5px;
+    width: 100%;
+    padding-left: 50%;
 }

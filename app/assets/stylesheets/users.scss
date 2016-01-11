@@ -5,13 +5,11 @@
 .page_container {
     width: 750px;
     height: 100%;
-    margin: 12% auto;
-    background-color: aliceblue;
+    margin: 6% auto;
 }
 
 #profile_posts {
     margin: 10% 25% 0 25%;
-    background-color: bisque;
     padding: 20px;
 }
 
@@ -21,7 +19,28 @@
 
 #personal_posts {
     width: 540px;
-    margin-left: -30%;
+    height: 150px;
+    overflow: scroll;
+    margin-left: -33%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#personal_posts h4{
+    font-family: redressed, helvetica;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 3vh;
+    text-align: center;
+}
+
+#personal_posts h5 {
+    font-weight:normal;
+    font-family: antic-didone, "comic sans ms";
+    font-size: 2vh;
+    text-align: center;
 }
 
 #profile_posts h1 {
@@ -30,7 +49,14 @@
     margin-left: 30%;
 }
 
+#reply_div {
+    margin-left: 43%;
+}
+
 #create_post {
-    margin: 10% 25% 0 25%;
-    background-color: blueviolet;
+    margin: 10% 25% 0 42%;
+}
+
+#create_post h1 {
+    margin-left: 14%;
 }
