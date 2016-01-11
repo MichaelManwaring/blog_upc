@@ -43,11 +43,13 @@ body {
 #post_form {
     width: 720px;
     margin-left: 46%;
-    margin-top: 8%;
+    margin-top: 6%;
     padding-bottom: 7%;
 }
 
 #posts {
+    height: 150px;
+    position:absolute;
     overflow: scroll;
     width: 720px;
     margin-left: 25%;

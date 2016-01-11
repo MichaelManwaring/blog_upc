@@ -1,37 +1,47 @@
-<h1>ToastPosts</h1>
-<p>Your ToastPosts Profile</p>
+<div class= "page_container">
+
+    <div id = "profile_posts">
+
+        <%= content_tag :h1, 'My Profile' %>
+        <h2> <%= @user.username %></h2>
 
 
-<%= content_tag :h1, 'user profile for:' %>
+        <% @user.posts.reverse.each do |p| %>
+	
+    <div id ="personal_posts">
+        
+        <%= content_tag :h4, p.title %>
+            <%= content_tag :h5, p.user.username %>
+        <%= content_tag :h5, p.p_content %>
+        
+    </div>
 
-<h2> <%= @user.username %></h2>
+	       <!-- comment form embedded in post. -->
+	       <%= link_to "Click here to comment", post_path(p) %> %>
+        <!-- comment loop -->
+        <%= p.comments.each do |c| %>
+		      <%= content_tag :h6, c.c_content %>
+	       <% end %>
+    <% end %>
 
-
-<%= content_tag :h1, 'User Posts:' %>
-
-<% @user.posts.reverse.each do |p| %>
-	<%= content_tag :h4, p.title %>
- 	<%= content_tag :h5, p.user.username %>
-	<%= content_tag :h5, p.p_content %>
-	<!-- comment form embedded in post. -->
-	<%= link_to "Click here to comment", post_path(p) %> %>
-	<!-- comment loop -->
-	<%= p.comments.each do |c| %>
-		<%= content_tag :h6, c.c_content %>
-	<% end %>
-<% end %>
+    </div>
 
 
 
+    <div id = "create_post">
+    
+        <% if @user == @currentuser %>
+        <%= content_tag :h1, 'Create Post:' %>
+            <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
+                <%=f.label :title %>
+                <%=f.text_area :title %>  
+	   <br>
+	               <%=f.label :content %>
+	               <%=f.text_area :p_content %>  
+                <%=f.submit :create %>
+            <% end %>
+        <% end %>
+    
+    </div>
 
-<% if @user == @currentuser %>
-	<%= content_tag :h1, 'Create Post:' %>
-	<%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
-	  <%=f.label :title %>
-	  <%=f.text_area :title %>  
-	  <br>
-	  <%=f.label :content %>
-	  <%=f.text_area :p_content %>  
-	  <%=f.submit :create %>
-	<% end %>
-<% end %>
+</div>

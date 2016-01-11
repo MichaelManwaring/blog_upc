@@ -1,3 +1,36 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page_container {
+    width: 750px;
+    height: 100%;
+    margin: 12% auto;
+    background-color: aliceblue;
+}
+
+#profile_posts {
+    margin: 10% 25% 0 25%;
+    background-color: bisque;
+    padding: 20px;
+}
+
+#profile_posts h2 {
+    margin-left: 48%;
+}
+
+#personal_posts {
+    width: 540px;
+    margin-left: -30%;
+}
+
+#profile_posts h1 {
+    font-family: redressed, helvetica;
+    font-size: 5vh;
+    margin-left: 30%;
+}
+
+#create_post {
+    margin: 10% 25% 0 25%;
+    background-color: blueviolet;
+}
