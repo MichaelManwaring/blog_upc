@@ -16,28 +16,33 @@
         
     </div>
 
+    <div id="reply_div"> 
 	       <!-- comment form embedded in post. -->
-	       <%= link_to "Click here to comment", post_path(p) %> %>
+        <%= link_to "Reply", post_path(p) %> %>
         <!-- comment loop -->
         <%= p.comments.each do |c| %>
 		      <%= content_tag :h6, c.c_content %>
 	       <% end %>
     <% end %>
-
+        
     </div>
 
+    </div>
 
 
     <div id = "create_post">
     
         <% if @user == @currentuser %>
-        <%= content_tag :h1, 'Create Post:' %>
+        <%= content_tag :h1, 'Create Post' %>
             <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
                 <%=f.label :title %>
+        <br>
                 <%=f.text_area :title %>  
 	   <br>
 	               <%=f.label :content %>
+        <br>
 	               <%=f.text_area :p_content %>  
+        <br>
                 <%=f.submit :create %>
             <% end %>
         <% end %>

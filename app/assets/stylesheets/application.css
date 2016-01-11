@@ -64,3 +64,10 @@ body {
     width: 300px;
 }
 
+.reply_content {
+    width: 540px;
+    margin: 0 auto;
+    padding-top: 15%;
+    padding-left: 10px;
+}
+
