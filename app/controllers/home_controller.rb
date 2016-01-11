@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
     
     def index
-    	@sesh
-    	if @sesh==nil
+    	@sesh=current_user
+    	if @sesh!=nil
     		redirect_to home_feed_path
     	end
         @users=User.all
