@@ -30,8 +30,8 @@ get 'home/feed' => 'home#feed'
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :users, :posts, :comments, :profiles
-
+  resources :users, :profiles, :posts, :comments
+  
   # Example resource route with options:
   #   resources :products do
   #     member do

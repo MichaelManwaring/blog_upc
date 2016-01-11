@@ -3,8 +3,6 @@ class CommentsController < ApplicationController
 	@user=current_user
 	@comment=Comment.create(comment_params)
 	@user.comments.push(@comment)
-	# @post=Post.find(params[:post_id])
- #  @post.comments.push(@comment)
   redirect_to home_feed_path
   end
 
