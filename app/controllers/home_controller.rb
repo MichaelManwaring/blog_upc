@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
     
     def index
+    	@sesh
+    	if @sesh==nil
+    		redirect_to home_feed_path
+    	end
         @users=User.all
     end
 
@@ -9,6 +13,7 @@ class HomeController < ApplicationController
   	     @users=User.all
   	     @post=Post.new
   	     @comment=Comment.new
+  	     @currentuser=current_user 
     end
 
     def show
