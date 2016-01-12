@@ -1,3 +1,16 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page_container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#create_post {
+    margin-left: 390px;
+}
+
+#create_post h1 {
+    margin-left: 3%;
+}
