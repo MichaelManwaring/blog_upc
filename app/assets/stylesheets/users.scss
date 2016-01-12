@@ -3,29 +3,44 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .page_container {
-    width: 750px;
+    width: 720px;
     height: 100%;
-    margin: 6% auto;
+    margin-left: 16%;
+}
+
+.page_container h1{
+    font-size: 4vh;
+}
+
+.page_container h1, h2 {
+    margin-left: 58%;
+    font-family: antic-didone, "comic sans ms";
+
+}
+
+.page_container h2 {
+    padding-left: 8%;
+    font-family: antic-didone, "comic sans ms";
+
 }
 
 #profile_posts {
-    margin: 10% 25% 0 25%;
+    width: 100%;
     padding: 20px;
+    padding-left: 200px;
 }
 
 #profile_posts h2 {
-    margin-left: 48%;
+    padding-left: 285px;
 }
 
 #personal_posts {
-    width: 540px;
-    height: 150px;
     overflow: scroll;
-    margin-left: -33%;
+    width: 100%;
+    height: 50px;
     padding-top: 20px;
     padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: -9%;
 }
 
 #personal_posts h4{
@@ -50,13 +65,6 @@
 }
 
 #reply_div {
-    margin-left: 43%;
+    margin-bottom: 30%;
 }
 
-#create_post {
-    margin: 10% 25% 0 42%;
-}
-
-#create_post h1 {
-    margin-left: 14%;
-}

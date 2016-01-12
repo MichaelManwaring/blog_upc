@@ -1,10 +1,9 @@
 <div class= "page_container">
 
-    <div id = "profile_posts">
-
         <%= content_tag :h1, 'My Profile' %>
         <h2> <%= @user.username %></h2>
-
+        
+    <div id = "profile_posts">
 
         <% @user.posts.reverse.each do |p| %>
 	
@@ -34,6 +33,7 @@
     
         <% if @user == @currentuser %>
         <%= content_tag :h1, 'Create Post' %>
+        <br>
             <%= form_for @post, url: posts_path, html: {method: :post} do |f| %>
                 <%=f.label :title %>
         <br>
